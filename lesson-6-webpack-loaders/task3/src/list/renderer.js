@@ -15,10 +15,10 @@ const compareTasks = (a, b) => {
   return new Date(b.createDate) - new Date(a.createDate);
 };
 
-const createCheckbox = ({ done }) => {
+const createCheckbox = ({ done, id }) => {
   const checkboxElem = document.createElement("input");
   checkboxElem.setAttribute("type", "checkbox");
-  //  checkboxElem.setAttribute("data-id", id);
+  checkboxElem.setAttribute("data-id", id);
   checkboxElem.checked = done;
   checkboxElem.classList.add("list-item__checkbox");
 
@@ -27,11 +27,11 @@ const createCheckbox = ({ done }) => {
 
 const createListItem = ({ text, done, id }) => {
   const listItemElem = document.createElement("li");
-  listItemElem.classList.add("list-item");
-  listItemElem.setAttribute("data-id", id);
-  const checkboxElem = createCheckbox({ done });
+  listItemElem.classList.add("list-item", "list__item");
+  //  listItemElem.setAttribute("data-id", id);
+  const checkboxElem = createCheckbox({ done, id });
   if (done) {
-    listItemElem.classList.add("list__item_done");
+    listItemElem.classList.add("list-item_done");
   }
 
   const textElem = document.createElement("span");
@@ -40,6 +40,7 @@ const createListItem = ({ text, done, id }) => {
 
   const deleteBtnElem = document.createElement("button");
   deleteBtnElem.classList.add("list-item__delete-btn");
+  deleteBtnElem.setAttribute("data-id", id);
 
   listItemElem.append(checkboxElem, textElem, deleteBtnElem);
 

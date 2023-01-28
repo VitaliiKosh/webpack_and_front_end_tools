@@ -1,4 +1,5 @@
 import { onCreateTask } from "./createTask.js";
+import { deleteTask } from "./tasksGateway.js";
 import { onToggleTask } from "./updateTask.js";
 
 export const initTodoListHandlers = () => {
@@ -7,4 +8,7 @@ export const initTodoListHandlers = () => {
 
   const todoListElem = document.querySelector(".list");
   todoListElem.addEventListener("click", onToggleTask);
+
+  const toDeleteElem = document.querySelector(".list");
+  toDeleteElem.addEventListener("click", deleteTask);
 };
