@@ -1,13 +1,13 @@
-import { printProfile } from "./profile";
+import { printProfile } from './profile';
 
 const userData = {
-  name: "Tom",
+  name: 'Tom',
   age: 17,
 };
 
 const profile = {
   ...userData,
-  company: "Gromcode",
+  company: 'Gromcode',
 };
 
 printProfile(profile);

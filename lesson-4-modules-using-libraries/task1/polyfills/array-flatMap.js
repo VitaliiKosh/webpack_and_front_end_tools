@@ -1,6 +1,6 @@
 // здесь никакие экспорты не нужны
 
-console.log("polyfill for flatMap");
+console.log('polyfill for flatMap');
 
 window.Array.prototype.flatMap =
   Array.prototype.flatMap ||

@@ -1,9 +1,9 @@
-import { renderTasks } from "./render.js";
-import { setItem } from "./storage.js";
-import { getTasksList, deleteFromServ } from "./tasksGateway.js";
+import { renderTasks } from './render.js';
+import { setItem } from './storage.js';
+import { getTasksList, deleteFromServ } from './tasksGateway.js';
 
 export const deleteTask = (e) => {
-  const isDeletebox = e.target.classList.contains("list-item__delete-btn");
+  const isDeletebox = e.target.classList.contains('list-item__delete-btn');
 
   if (!isDeletebox) {
     return;
@@ -13,7 +13,7 @@ export const deleteTask = (e) => {
   deleteFromServ(taskId)
     .then(() => getTasksList())
     .then((newTasksList) => {
-      setItem("taskList", newTasksList);
+      setItem('taskList', newTasksList);
       renderTasks();
     });
 };

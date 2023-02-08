@@ -1,3 +1,3 @@
 export default function renderDashboard() {
-  console.log("redering dashboard ...");
+  console.log('redering dashboard ...');
 }

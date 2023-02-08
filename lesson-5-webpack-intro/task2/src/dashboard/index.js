@@ -1,3 +1,3 @@
-import renderDashboard from "./renderDashboard";
+import renderDashboard from './renderDashboard';
 
 renderDashboard();

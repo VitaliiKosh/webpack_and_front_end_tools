@@ -1,6 +1,6 @@
 // здесь никакие экспорты не нужны
 
-console.log("polyfill for flat");
+console.log('polyfill for flat');
 
 window.Array.prototype.flat =
   Array.prototype.flat ||

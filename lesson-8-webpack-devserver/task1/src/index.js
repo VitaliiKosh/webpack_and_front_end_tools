@@ -1,11 +1,11 @@
-import renderProfile from "./profile/renderProfile";
-import "./index.css";
+import renderProfile from './profile/renderProfile';
+import './index.css';
 
 const profileData = {
-  name: "Tom",
-  location: "The World",
+  name: 'Tom',
+  location: 'The World',
 };
 
 renderProfile(profileData);
 
-alert("App is ready");
+alert('App is ready');

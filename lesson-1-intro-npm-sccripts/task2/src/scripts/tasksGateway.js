@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://crudcrud.com/api/bf46b26b87eb4f5a967755f3a4a847d0/tasks";
+  'https://crudcrud.com/api/bf46b26b87eb4f5a967755f3a4a847d0/tasks';
 
 const mapTasks = (tasks) =>
   tasks.map(({ _id, ...rest }) => ({ ...rest, id: _id }));
@@ -12,9 +12,9 @@ export const getTasksList = () => {
 
 export const createTask = (taskData) => {
   return fetch(baseUrl, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json;charset=utf-8",
+      'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(taskData),
   });
@@ -22,9 +22,9 @@ export const createTask = (taskData) => {
 
 export const updateTask = (taskId, updatedTaskData) => {
   return fetch(`${baseUrl}/${taskId}`, {
-    method: "PUT",
+    method: 'PUT',
     headers: {
-      "Content-Type": "application/json;charset=utf-8",
+      'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(updatedTaskData),
   });
@@ -32,6 +32,6 @@ export const updateTask = (taskId, updatedTaskData) => {
 
 export const deleteTask = (taskId) => {
   return fetch(`${baseUrl}/${taskId}`, {
-    method: "DELETE",
+    method: 'DELETE',
   });
 };
